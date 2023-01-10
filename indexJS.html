@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+
+
+                    <!-- добавим стили mocha для отображения результатов -->
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+                <!-- добавляем сам фреймворк mocha -->
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+                <script>
+                    // включаем режим тестирования в стиле BDD
+                    mocha.setup('bdd');
+                </script>
+                <!-- добавим chai -->
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+                <script>
+                    // chai предоставляет большое количество функций. Объявим assert глобально
+                    let assert = chai.assert;
+                </script>
+
+
+</head>
+<body>
+    <h1>Hello JavaScript!!!</h1>
+    <script>
+
+        //    alert ("Я JavaScript!");
+
+        // let first = prompt("first=");
+        // let second = prompt("second=");
+    
+        // function loger(first, second) {
+        //     console.log("resultLoger=", first === second);
+        // }
+        // loger(first, second);
+
+        // function log (first, second) {
+        //     console.log("data=", first, second);
+        // }
+        // log(first, second);
+
+
+
+
+
+            // function showSuccess (data) {
+            //     console.log("Success=", data);
+            // }
+            // function showError (data) {
+            //     console.error("Error=", data);
+            // }
+
+            // function checkPrice (first, second) {
+            //     let result= first === second;
+            //     if (result) {showSuccess(result);}
+            //     else{showError(result);}
+            // }
+            // checkPrice(2, 8);
+            // checkPrice(2, 2);
+            // checkPrice(5, 5);
+
+
+
+            // function sum(first, second) {
+            //     const result= first + second;
+            //     console.log("result=", result); 
+            //     return result;  
+            // }
+            // const sum0 =sum(2, 7);
+            // const sum1 =sum(sum0, 10);
+            // console.log("sum1=", sum1);
+
+
+
+            // const sum = (a = 0, b = 0) => {
+            // return a + b;
+            // };
+            // console.log("Sum=", sum(4, 4));
+
+
+
+            // const toUpperCase = (string = '') => {
+            //     console.log("string=", string);
+            //     return string.toUpperCase();
+            // };
+            // console.log("result=", toUpperCase("hello"));
+
+
+            
+            // let string = prompt("add string=");
+            // console.log("add string=", string);
+            // const toUpperCase = (data = "") => {
+            // console.log("inner_string=", string);
+            // let result = data.toUpperCase();
+            // return result;
+            // };
+            // console.log("result=", toUpperCase(string));
+        
+
+            // const sliceString = (string = '', length = 0) => {
+            //     result = string.slice(0, length);
+            //     return result;
+            // };
+            // console.log(sliceString("ffHello2", 4))
+
+
+
+            // const revertCase = (string = '') => {
+            //     console.log("One_string=", string);
+            //     let result = "";
+            //     for(let i=0; i<string.length; i++) {
+            //         // console.log(string[i]);
+            //         if (string[i] === string[i].toUpperCase()) {result += string[i].toLowerCase();}
+            //         else {result += string[i].toUpperCase();}
+            //     }
+            // return result;
+            // };
+            // console.log("string=", revertCase("Hello World"));
+            // console.log("string=", revertCase("HeLlO WoRlD"));
+            // console.log("string=", revertCase("HELLO WORLD"));
+
+
+
+            // const revertCase = (string = '') =>{
+            //     let result = "";
+            //     for (const index in string) {
+            //         console.log("result=", string[index]);
+            //     }
+            // }
+            // revertCase("Hello World");
+
+
+            // const revertCase = (string = '') => {
+            //     console.log("One_string=", string);
+            //     let result = "";
+            //     for (const index of string) {
+            //         // console.log("result=", index);
+
+            //         if (index === index.toUpperCase()) {result += index.toLowerCase();}
+            //         else {result += index.toUpperCase();}
+            //     }
+            //     return result;
+            // }
+            // console.log("string=", revertCase("Hello World"));
+            // console.log("string=", revertCase("HeLlO WoRlD"));
+            // console.log("string=", revertCase("HELLO WORLD"));
+
+
+            // const arrToString = (arr = [], delimiter = '') => {
+            //     console.log("delimeter=", delimiter, ", in_arr=", arr);
+            //     return arr.join(delimiter);
+            // };
+            // console.log(arrToString(['apple', 'orange', 'banana'], '-'));
+
+
+
+            // const stringToArray = (string = '') => {
+            //     return string.split(" ");
+            // };
+            // console.log(stringToArray('Hello, World!'));
+
+
+
+
+
+            // const toCamelCase = (someString = '') => {
+            //     let result;
+
+            //     let string = someString.toLowerCase();
+            //     console.log("toLowerCase=", string);
+
+            //     let arr = string.split(" ");
+            //     console.log("arr=", arr);
+
+            //     for (let i=0; i<arr.length; i++) {
+            //         if (i === 0) {
+            //             result = arr[i];
+            //         }
+            //             else{ let arrto = arr[i];
+            //                 for(let item=0; item<arrto.length; item++) {
+            //                     console.log("arrto=", arrto[item]);
+            //                     if (item === 0) {
+            //                         result += arrto[item].toUpperCase();
+            //                     } else {
+            //                         result += arrto[item];
+            //                     }
+            //                 }
+            //             }
+            //     }
+            //         console.log("промежуточный=", result);
+            // return result;     
+            // };
+            // console.log("finish=", toCamelCase('Hello World!'));
+
+
+
+
+            // const toCamelCase = (someString = '') => {
+            //     let result;
+            //     let string = someString.toLowerCase();
+            //     let arr = string.split(" ");
+            //     for (let i=0; i<arr.length; i++) {
+            //         if (i === 0) {
+            //             result = arr[i];
+            //         }
+            //             else{ let arrto = arr[i];
+            //                 for(let item=0; item<arrto.length; item++) {
+                                
+            //                     if (item === 0) {
+            //                         result += arrto[item].toUpperCase();
+            //                     } else {
+            //                         result += arrto[item];
+            //                     }
+            //                 }
+            //             }
+            //     }
+            // return result;     
+            // };
+            // console.log("finish=", toCamelCase('Hello World!'));
+
+
+
+
+            // let a = prompt("Первое число?", 1);
+            // let b = prompt("Второе число?", 2);
+            // alert(+a + +b); // 12
+
+
+
+            
+            // const title = prompt("Какое официальное название JavaScript?");
+            // console.log(title);
+            // if(title === "ECMAScript") {console.log("Верно!");}
+            // else{console.log("Не знаете? ECMAScript!");}
+           
+            
+
+            // const numb = prompt("Введите любое число");
+            // if (numb < 0) {console.log("-1")}
+            // else{
+            //     if (numb > 0) {console.log("1")}
+            //     else{console.log("0")}
+            // }
+
+
+            // const a = +prompt ("Введите число a");
+            // const b = +prompt ("Введите число b");
+            // let result = "a + b=" + ((a + b < 4) ? 'Мало': 'Много');
+            // let result;
+            // if (a + b < 4) {
+            // result = 'Мало';
+            // } else {
+            // result = 'Много';
+            // }
+            // alert(result);
+
+
+
+            // const logyn = prompt("Введите свой logyn")
+            // let messagy;
+            // if (logyn === "Сотрудник") {messagy = "Привет";}
+            // else{
+            //     if (logyn === "Директор") {messagy = "Здравствуйте";}
+            //     else{
+            //         if (logyn === "") {messagy = "Нет логина";}
+            //     }
+            // }
+            // alert(messagy);
+
+
+
+            // const logyn = prompt("Введите свой logyn")
+            // let messagy = (logyn === "Сотрудник") ? "Привет" : (logyn === "Директор") ? "Здравствуйте" : "Нет логина";
+            // alert(messagy);
+
+
+
+            // const fruits = {apple: 2, orange: 4, banana: 3};
+            // const pick = (obj, ...fields) => {
+            //     let ftp = {};
+            //     for (let item in obj) {
+            //     if(fields.includes(item)) {ftp[item] = obj[item];}
+            //     }
+            //     return ftp;
+            // };
+            // console.log(pick(fruits, "orange", "apple"));
+
+
+
+            // const fruits = {apple: 2, orange: 4, banana: 3};
+            // const omit = (obj, ...fields) => {
+            // let result = {};
+            // for (const item in obj) {
+            //     if (fields.includes(item)) {}
+            //     else{result[item] = obj[item];}
+            // }
+            // return result;
+            // };
+            // console.log(omit(fruits, "apple", "banana"));
+            
+
+
+
+                          
+
+            // const bar = [10, 15, 20, 15, 6, 4];
+            // const sumOfArrayElements = (arr = []) => {
+            //     let initialValue = 0;
+            //     let result = arr.reduce(function(accumulator, carrentValue){return accumulator + carrentValue}, initialValue);
+            //     return result;
+            // };
+            // console.log(sumOfArrayElements(bar));
+
+
+
+
+            
+            // const age = +prompt("Enter number age=");
+            // if(age < 14 || age > 90){console.log("age=", age);}
+            // else{console.log("Находится в приделе диапазона");}
+           
+
+
+
+            // const age = +prompt("Enter number age=");
+            // if(age >= 14 && age <= 90){console.log("age=", age);}
+            // else{console.log("Находится в не диапазона");}
+
+
+
+            // const age = +prompt("Enter number age=");
+            // if(!(age >= 14 && age <= 90)){console.log("age=", age);}
+            // else{console.log("Находится в диапазона");}
+
+
+
+            // const login = prompt("Enter login!");
+            // if(login === "Админ"){
+            //     let pasport = prompt("Enter pasport");
+            //     if(pasport === "Я Главный"){console.log("Здравствуйте!!!");}
+            //     else{
+            //         if (pasport === "" || pasport === null) {console.log("Отменено pasport");}
+            //         else{console.log("Я вас не знаю! pasport");}
+            //     }
+            // }
+            // else{
+            //     if (login === "" || login === null) {console.log("Отменено login");}
+            //     else{console.log("Я вас не знаю login!");}
+            //     }
+
+
+
+
+            // const login = prompt("Кто там?");
+            // if(login === "Админ"){
+            //     let pasport = prompt("Пароль?");
+            //     if(pasport === "Я Главный"){alert("Здравствуйте!!!");}
+            //     else{
+            //         if (pasport === "" || pasport === null) {alert("Отменено pasport");}
+            //         else{alert("Неверный пароль!!!");}
+            //     }
+            // }
+            // else{
+            //     if (login === "" || login === null) {alert("Отменено login");}
+            //     else{alert("Я вас не знаю!!!");}
+            //     }
+
+
+
+            // let user = prompt("Введите имя");
+            // alert(user ?? "Анони");
+
+
+
+            // let firstName;
+            // let lastName;
+            // let nikName = "Ben";
+            // let result = (firstName ?? lastName ?? nikName ?? "Anonimus");
+            // alert(result);
+
+
+            // let height = 0;
+            // alert(height ?? 100);
+
+
+
+            // let height = null;
+            // let width = undefined;
+            // alert((height ?? 100) * (width ?? 50));
+
+
+            // let a = 3;
+            // while (a != 0) {alert(a); a--;};
+
+
+
+            // let i = 0;
+            // do{alert(i); i++;}
+            // while(i < 3);
+
+
+            // let i = 2;
+            // for(i; i < 5; i++){
+            //     alert(i);
+            // };
+            // alert(i);
+
+
+
+            // let sum = 0;
+            // while(true){
+            //     let value = +prompt("Введите число");
+            //     if(!value){break};
+            //     sum += value;
+            // }
+            // alert("SUM=" + sum);
+
+
+            // for(let i = 0; i < 10; i++){
+            //     if(i % 2) {alert(i);}
+            // }
+
+
+            // let i = 0;
+            // while(i++ < 5){alert(i)};
+
+
+            // for(let i =1; i < 11; i++){
+            //     // console.log(i);
+            //     if(!(i % 2)){console.log(i);}
+            // }
+
+
+
+            // for (let i = 0; i < 3; i++) {
+            // alert( `number ${i}!` );
+            // }
+
+
+            // outer: for (let i = 0; i < 3; i++){
+            //     for(let j = 0; j < 3; j++){
+            //         let input = prompt(`Значение  на координатах (${i}, ${j})`);
+            //         if(!input){break outer};
+            //     }
+            // }
+            // alert("Готово!");
+
+
+            // let i = 0;
+            // while (i < 3) {alert( `number ${i}!` ); i++;}
+            
+            
+            
+        //    let number = 0;
+        //     while(true){
+        //         console.log(number, "тип переменной=", typeof number);
+        //         if(number > 100 || number === null){
+        //             break;
+        //         }
+        //         else{
+        //             number = prompt("Введите число больше 100!!!");
+        //         }
+        //     }
+        //     alert("Stop now!!!");
+
+
+        
+
+// let n = 10;
+// let arr = [];
+// stop: for(let i = 2; i <= n; i++){
+//         for(let j = 2; j < i; j++){
+//         // console.log(i, j);
+//         if(i % j === 0){continue stop}
+//         }
+//     arr.push(i);
+// }
+// console.log("Простые числа:", arr);
+
+
+
+
+// const arr = {foo:{bar:{baz:777}}};
+// const path = "foo-bar-baz";
+
+// function getValue (someObj = {}, somePath = ""){
+//     let result;
+
+//     const arr = somePath.split("-");
+//     console.log(arr);
+
+//     for(const item of arr){
+//         console.log(item);
+//         if(result === undefined){result = someObj[item];}
+//         else{result = result[item];}
+//     }
+// return result;
+// }
+// console.log(getValue(arr, path));
+
+
+
+// let a = +prompt("Введи результат сложения 3 + 5");
+//  switch(a){
+//     case 5: 
+//         console.log("Маловато будет");
+//         break;
+//     case 8: 
+//         console.log("OK!");
+//         break;
+//     case 10: 
+//         console.log("No!");
+//         break;
+//     default: 
+//         console.log("No data!");
+//  }
+
+
+
+
+// let a = 5;
+
+// switch(a){
+//     case 4:
+//         console.log("Ok!");
+//         break;
+//     case 3:
+//     case 5:
+//         console.log("No");
+//         break;
+//     default:
+//         console.log("NoNo!!!");
+// }
+
+
+
+
+// let a = prompt("Enter number, please");
+
+// switch(a){
+//     case "0":
+//     case "1":
+//         console.log("0 or 1");
+//         break;
+//     case "2":
+//         console.log("2");
+//         break;
+//     case 3:
+//         console.log("Foo bar!");
+//         break;
+//     default:
+//         console.log("NoNo!!!");
+// }
+            
+
+
+// let browser = prompt("Enter your brovser  (Edge, Chrome, Firefox, Safari, Opera");
+
+// switch (browser) {
+//   case 'Edge':
+//     alert( "You've got the Edge!" );
+//     break;
+
+//   case 'Chrome':
+//   case 'Firefox':
+//   case 'Safari':
+//   case 'Opera':
+//     alert( 'Okay we support these browsers too' );
+//     break;
+
+//   default:
+//     alert( 'We hope that this page looks ok!' );
+// }
+
+
+
+// let browser = prompt("Enter your brovser  (Edge, Chrome, Firefox, Safari, Opera");
+
+// if(browser === "Edge"){
+//     alert( "You've got the Edge!" );
+// }
+// else{
+//     if(browser === "Chrome" || browser === "Firefox" || browser === "Safari" || browser === "Opera"){
+//         alert( 'Okay we support these browsers too' );
+//     }
+//     else{alert( 'We hope that this page looks ok!' );}
+// }
+
+
+
+
+// const number = +prompt('Введите число между 0 и 3', '');
+
+// if (number === 0) {
+//   alert('Вы ввели число 0');
+// }
+
+// if (number === 1) {
+//   alert('Вы ввели число 1');
+// }
+
+// if (number === 2 || number === 3) {
+//   alert('Вы ввели число 2, а может и 3');
+// }
+
+
+
+// const number = +prompt('Введите число между 0 и 3', '');
+
+// switch (number){
+//     case 0:
+//         alert('Вы ввели число 0');
+//         break;
+//     case 1:
+//         alert('Вы ввели число 1');
+//         break;
+//     case 2:
+//     case 3:
+//         alert('Вы ввели число 2, а может и 3');
+//         break;
+// }
+
+
+
+
+// const products = ['keyboard-sk8855', 'mouse-sd63', 'keyboard-sk8855', 'ssd-asus', 'ssd-asus'];
+
+// const transformArrToObject = (arr = []) => {
+//     let result = {};
+//         for (const field of arr) {
+//         console.log(field);
+//         if(result[field]){result[field] += 1;}
+//         else{result[field] = 1;}
+//         }
+// return result;
+// };
+// console.log("arraySum=", transformArrToObject(products));
+
+
+
+
+
+// const data = '1 2 3 -4 6';
+// const highestAndLowest = (numbers) => {
+// const arr = numbers.split(" ");
+// console.log(arr);
+
+// let numbermin = Math.min.apply(null, arr);
+// let numbermax = Math.max.apply(null, arr);
+
+// let arrresult = [];
+// arrresult.push(numbermin, numbermax);
+// console.log(arrresult);
+
+// let string = arrresult.join(" ");
+
+// return string;
+// };
+// console.log(highestAndLowest(data));
+
+
+
+// const arr = [5, 8, -3, 10];
+// let resultmin = Math.min(...arr);
+// console.log(resultmin);
+
+
+
+
+// const users = ['user-1', 'user-2', 'user-3'];
+// let result = [];
+// const removeByIndex = (arr = [], index = 0) => {
+//     for (let i = 0; i < arr.length; i++) {
+//         console.log(i);
+//         if(i < index || i > index){
+//             result.push(arr[i]);
+//         }
+//     }
+// return result;
+// };
+// console.log(removeByIndex(users, 2));
+
+
+               
+// const users = ['user-1', 'user-2', 'user-3', 'user-4', 'user-5'];
+// const removeByIndex = (arr = [], index = 0) => {
+//     let result = [];
+
+//     console.log("index=", index, "number=", (index+1));
+
+//     for (let i = 0; i < arr.length; i++){
+//         if(index === 0){
+//             result = arr.slice(1, arr.length);
+//         }
+//         else{
+//             if(index > 0 && index < (arr.length-1)){
+//                 let first = arr.slice(0, index);
+//                 let second = arr.slice((index+1), arr.length);
+//                 result = first.concat(second);
+//             }
+//             else{result = arr.slice(0, i);}
+//         }
+//     }
+// return result;
+// };
+// console.log(removeByIndex(['a', 'b', 'c'], 0));
+
+
+// const arr2 = ["Hello", "World!"];
+// result = users.concat(arr2);
+// console.log(result);
+
+
+
+
+
+// function showPrimes(n){
+// for(let i = 2; i <= n; i++){
+//     if(!isPrimes(i)) continue;
+//     console.log(i);
+// }
+// }
+
+// function isPrimes(data){
+//     for(let j = 2; j < data; j++){
+//         if(data % j == 0){return false;}
+//     }
+//     return true;
+// }
+// showPrimes(11);
+
+
+
+
+
+
+// const age = +prompt("How many age?");
+// function checkAge(date){
+//     return age > 18 ? true : confirm("Родители разрешили?")
+// }
+// checkAge(age);
+
+
+
+
+// const age = +prompt("How many age?");
+// function checkAge(date){
+//     return age > 18 || confirm("Родители разрешили?")
+// }
+// console.log(checkAge(age));
+
+
+
+
+
+// function showMinValue(){
+//     const valuea = -10;
+//     const valueb = -3;
+//     console.log(minValue(valuea, valueb));
+// }
+
+// function minValue(a, b){
+// let result;
+// if(a < b){return a;}
+// else{return b;}
+// }
+// showMinValue()
+
+
+
+
+
+
+// function showMinValue(){
+//     const valuea = 20;
+//     const valueb = 45;
+//     console.log(minValue(valuea, valueb));
+// }
+
+// function minValue(a, b){
+// let result = (a < b) ? a : b;
+// return result;
+// }
+// showMinValue()
+
+
+
+
+// const a = +prompt("Введите число для возведения в степень");
+// const n = +prompt("Введите степень, натуральное число");
+
+// function pow(number, degree){
+//     let result;
+
+//     if(checkValueDegree(degree)){
+//         console.log("Yes");
+//         for (let i = 1; i <= degree; i++) {
+//             if(i === 1){result = number;}
+//             else{result *= number;}
+//         }
+//     }
+//     else{console.log(`Степень ${degree} не поддерживается`);}
+// return console.log(result);
+// }
+
+// function checkValueDegree (value){
+//     let result = (value % 1 == 0 && value > 0) ? true : false;
+//     return result;
+// }
+// pow(a, n);
+
+
+
+
+
+// function ask(question, yes, no){
+//     if(confirm(question)){yes();}
+//     else{no();}
+// }
+
+// function showYes(){
+//     alert("Вы согласны.");
+// }
+
+// function showNo(){
+//     alert("Вы отменили выполнение.");
+// }
+
+// ask("Вы согласны?", showYes, showNo)
+
+
+
+// function ask(question, yes, no){
+//     if(confirm(question)){yes();}
+//     else{no();}
+// }
+
+// ask("Вы согласны?",
+// function(){alert("Вы согласны.");},
+// function(){alert("Вы отменили выполнение.");}
+// )
+
+
+// seyHi("Anna");
+// function seyHi(name){
+//     console.log(`Hi, ${name}`);
+// }
+
+
+
+
+// let girl = function (name) {
+//     console.log(`Hi, ${name}`)
+// };
+// girl("Anna");
+
+
+
+
+
+// let age = +prompt("How many ear?"); // возьмём для примера 16
+// let welcome;
+// if (age < 18) {
+// welcome = function(){alert("Привет!");};               
+// }                        
+
+// else {
+// welcome = function welcome() {alert("Здравствуйте!");};
+// }
+
+// welcome();
+
+
+
+
+
+// let a = +prompt("Enter number A");
+// let b = +prompt("Enter number B");
+
+// let sum = (a, b) => {
+//     let result = a + b;
+//     return console.log(result);
+// }
+// sum(a, b);
+
+
+
+
+// const ask = (question, yes, no) => {
+//   if (confirm(question)) {yes();}
+//   else {no();}
+// }
+
+// ask(
+//   "Вы согласны?",
+//   () => alert("Вы согласились."),
+//   () => alert("Вы отменили выполнение.")
+// );
+
+
+
+
+// const ask = (question, yes, no) => {
+//     let result;
+//     if (confirm(question)) {result = yes();}
+//     else {result = no();}
+// };
+// ask(
+//     "Вы согласны?",
+//     () => alert("Вы согласились."),
+//     () => alert("Вы отменили выполнение.")
+// );
+
+
+
+// const obj = {foo: 1, colar: "orange", name: "Anna"};
+// for(const item of Object.keys(obj)){
+//     console.log(item);
+// }
+
+
+
+
+
+// const random = {foo: 1, colar: "orange", name: "Anna"};
+
+// const pick = (obj, ...fields) => {
+//     let result = {};
+//     console.log(fields);
+//     for(const item of Object.keys(obj)){
+//        if(fields.includes(item)){result[item] = obj[item]}
+//     }
+// return console.log(result);
+// };
+// pick(random, "name", "foo");
+
+
+
+
+
+// const arr = ["foo", 52, 8, 87];
+// console.log("arr=" + arr);
+// console.log(arr[arr.length-3]);
+
+
+
+// const arr = [2, 52, 120];
+// const initialValue = 0;
+// let result = arr.reduce((accum, curent) => accum + curent, initialValue);
+// console.log(arr, "SUM=" + result);
+
+
+
+
+
+// let sum = (a, b) => {
+//     let result = a + b;
+//     // return console.log(result);
+//     return result;
+// }
+// // sum(2, 3);
+// console.log("SUM=" + sum(2, 3));
+
+
+
+
+
+// function pow (x, n){
+//   let result = 1;
+  
+//   for(i = 1; i <= n; i++) {
+//   result *= x;
+//   }
+
+//   return result;
+// }
+// console.log("POW=" + pow(2, 3));
+
+
+
+
+
+// const removeStringSpace = (str = '') => {
+//   const arr = str.split(" ");
+//   console.log("преобразуем строчку в массив=", arr);
+
+//   const result = arr.join("");
+//   return console.log(result);
+// };
+// removeStringSpace("Hello World!");
+
+
+
+
+// const codes = {"49": "Германия", "41": "Швуйцария", "44": "Великобритания", "1": "США"};
+// for(let key in codes) {
+//     console.log(key);
+// }
+
+
+
+
+// let user = {};
+// user.name = "John";
+// user.surname = "Smith"
+// console.log(user);
+// user.name = "Pete";
+// console.log("изменил=", user);
+// delete user.name;
+// console.log("удаление=", user);
+
+
+
+
+
+
+// let salaries = {John: 100, Ann: 160, Pete: 130};
+
+// function sumPay(employees) {
+//     let sum = 0;
+
+//     for(let item of Object.values(employees)) {
+//         console.log("item=", item);
+//         sum += item;
+//     }
+// return console.log("sum=", sum);
+// }
+// sumPay(salaries);
+
+
+
+
+
+// let menu = {width: 200, height: 300, title: "My menu"};
+// console.log("Исходный массив=", menu);
+// function multiplyNumeric(obj) {
+//     for(let key in obj) {
+//         if(typeof(obj[key]) === "number") {
+//             obj[key] *= 2;
+//         }
+//     }
+// }
+// multiplyNumeric(menu);
+// console.log(menu);
+
+
+
+
+// let user = {name:"Pety", age:32};
+// console.log("user=", user);
+
+// let girl = {name:"Tany"};
+
+// let girlfriend = {name:"Anna"};
+
+// Object.assign(user, [girl, girlfriend]);
+
+// console.log("New=", user);
+
+
+
+
+
+
+
+// let calculator = {
+//   read: function() {
+//     let a = +prompt("Enter a", 2);
+//     let b = +prompt("Enter b", 3);
+
+//     this.a = a;
+//     this.b = b;
+//   },
+
+//   sum: function() {
+//     let sum = this.a + this.b;
+//     return sum;
+//   },
+
+//   mul: function() {
+//     let mul = this.a * this.b;
+//     return mul;
+//   }
+// };
+
+// calculator.read();
+// console.log("description=", calculator);
+// alert( calculator.sum() );
+// alert( calculator.mul() );
+
+
+
+
+
+
+
+
+// let ladder = {
+//   step: 0,
+//   up() {
+//     this.step++;
+//     return this;
+//   },
+//   down() {
+//     this.step--;
+//     return this;
+//   },
+//   showStep: function() { 
+//     alert( this.step );
+//     return this;
+//   }
+// };
+
+// ladder.up().up().down().showStep().down().down().showStep();
+
+
+
+
+// function Calculator() {
+//     this.read = function() {
+//         let a = +prompt("Enter a", 4);
+//         let b = +prompt("Enter b", 2);
+
+//         this.a = a;
+//         this.b = b;
+//     }
+
+//     this.sum = function() {
+//         let sum = this.a + this.b;
+//         return sum;
+//     }
+
+//     this.mul = function() {
+//         let mul = this.a * this.b;
+//         return mul;
+//     }
+// }
+
+// let calculator = new Calculator();
+
+// calculator.read();
+// console.log("calculator obj=", calculator);
+
+// alert( "Sum=" + calculator.sum() );
+// console.log("Sum=" + calculator.sum());
+
+// alert( "Mul=" + calculator.mul() );
+// console.log("Mul=" + calculator.mul());
+
+
+
+
+
+
+
+// function Accumulator(startingValue = 3) {
+//     this.value = startingValue;
+//     this.read = function() {
+//         let a = +prompt("Enter a", 2);
+//         this.value = this.value + a;
+//     }
+// }
+
+// let accumulator = new Accumulator(1); // начальное значение 1
+
+// accumulator.read(); // прибавляет введённое пользователем значение к текущему значению
+// console.log(accumulator.value);
+// accumulator.read(); // прибавляет введённое пользователем значение к текущему значению
+
+// alert(accumulator.value); // выведет сумму этих значений
+// console.log(accumulator.value);
+
+
+
+
+let id = Symbol("id");
+let user = {name:"Vasy", girlfriend:"Anna", [id]:123};
+console.log(user);
+
+for(let key in user) {console.log(key);}
+
+console.log(user[id]);
+
+
+
+
+
+    </script>
+
+
+    <!-- Реализация тестирования функции -->
+    <!-- <script src="./add.js"></script> -->
+
+     <!-- элемент с id="mocha" будет содержать результаты тестов -->
+    <!-- <div id="mocha"></div> -->
+
+    <!-- запускаем тесты! -->
+    <!-- <script>
+        mocha.run();
+    </script> -->
+
+
+</body>
+</html>

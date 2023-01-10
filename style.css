@@ -1,0 +1,44 @@
+/* .wrapper {
+    outline: 1px solid black;
+    width: 1300px;
+    height: 1300px;
+} */
+
+.container {
+    display: grid;
+    /* grid-template-columns: 150px 450px 150px;
+    grid-template-rows: repeat(3, 100px);
+    grid-template-areas:
+    "heros . ." 
+    "block1 block2 block3"
+    "block4 block4 block4";
+    grid-gap: 20px 40px;
+    align-content: center; */
+    grid-template-columns: 350px minmax(300px, 450px) 350px;
+    grid-template-rows: repeat(3, 100px);
+}
+
+
+
+.heros {
+    /* grid-area: heros; */
+    margin: 0;
+}
+
+/* .item1 {
+    grid-area: block1;
+}
+
+.item2 {
+    grid-area: block2;
+    align-self: center;
+   justify-self: center;
+}
+
+.item3 {
+    grid-area: block3;
+}
+
+.item4 {
+    grid-area: block4;
+} */
