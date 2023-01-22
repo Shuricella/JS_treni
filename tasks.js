@@ -190,3 +190,111 @@
 // truncate("Вот, что мне хотелось бы сказать на эту тему:", 20);
 // console.log("…".length);
 
+
+
+
+// "Рок-н-ролл", "45456", "Sany"
+// let styles = ["Джаз", "Блюз", "45456", "Sany", "Рок-н-ролл"];
+// styles.push("Рок-н-ролл");
+// console.log("arr=", styles);
+
+
+
+// let styles = ["Джаз", "Блюз", "45456", "Sany", "Рок-н-ролл"];
+// function removeElementArr (arr = []) {
+//     if(arr.length >= 3 && arr.length%2 !== 0 ) {
+//         let index = Math.round(arr.length / 2 - 1);
+//         arr[index] = "Классика";
+//         console.log(arr);
+//     }
+//     else{return console.log(arr);}
+// }
+// removeElementArr(styles);
+
+
+// console.log(styles)
+// styles.shift();
+// console.log(styles)
+
+// styles.unshift("Рэп", "Регги");
+// console.log(styles)
+
+
+
+
+
+// let many = [];
+// let sum;
+// function sumInput() {
+    
+//     let numb = prompt("Enter to number", 55);
+   
+
+//     while(isFinite(numb) && numb !== null && numb !== "") {
+//         many.push(+numb);
+//         numb = prompt("Enter to number", 5);
+//     }
+
+//     sum = 0;
+//     for(let item of many) {
+//         sum += item;
+//     }
+//     return console.log(many, "typeof=", typeof many, "sum=", sum);
+// }
+// sumInput();
+
+
+
+
+
+// function getMaxSubSum(arr = []) {
+//     let muxsum = 0;
+//     let arrsum = [];
+//     let result;
+
+//     for(let i = 0; i < arr.length; i++) {
+//         let sum = 0;
+//         for(let j = i; j< arr.length; j++) {
+//             sum += arr[j];
+//             arrsum.push(sum);
+//         }
+//     }
+
+//     muxsum = Math.max.apply(null, arrsum);
+
+//     if(muxsum > 0) {result = muxsum}
+//     else{result = 0}
+
+//     console.log("muxsum=", result);
+// }
+
+// getMaxSubSum([-1, 2, 3, -9]); // 5
+// getMaxSubSum([-1, 2, 3, -9, 11]); // 11
+// getMaxSubSum([-2, -1, 1, 2]); // 3
+// getMaxSubSum([1, 2, 3]); // 6
+// getMaxSubSum([100, -9, 2, -3, 5]); // 100
+// getMaxSubSum([-100, -9, -2, -3, -5]); // 0
+
+
+
+
+
+// function getMaxSubSum(arr) {
+//     let maxSum = 0;
+//     let partialSum = 0;
+  
+//     for (let item of arr) { // для каждого элемента массива
+//       partialSum += item; // добавляем значение элемента к partialSum
+//       maxSum = Math.max(maxSum, partialSum); // запоминаем максимум на данный момент
+//       if (partialSum < 0) partialSum = 0; // ноль если отрицательное
+//     }
+  
+//     return console.log("maxSum=", maxSum);
+//   }
+  
+//   getMaxSubSum([-1, 2, 3, -9]); // 5
+//   getMaxSubSum([-1, 2, 3, -9, 11]); // 11
+//   getMaxSubSum([-2, -1, 1, 2]); // 3
+//   getMaxSubSum([100, -9, 2, -3, 5]); // 100
+//   getMaxSubSum([1, 2, 3]); // 6
+//   getMaxSubSum([-1, -2, -3]); // 0
